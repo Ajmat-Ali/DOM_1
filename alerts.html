@@ -4,20 +4,30 @@
 		<title>Showing Alerts</title>
 	</head>
 	<body>
+		<input type="text" id="fName" placeholder="Enter first Name">
+		<input type="text" id="lName" placeholder="Enter last Name">
+		<h2 id="dMsg">Message</h2>
 		<button onclick="showFirstName()">FIRSTNAME</button>
 		<button onclick="showLastName()">LASTNAME</button>
 		<button onclick="showFullName()">FIRSTNAME NAME</button>
 		<script type="text/javascript">
             function showFirstName() {
-			    // Complete to show an alert with your first name 
+			    let fName = document.getElementById("fName").value;
+				let msg = document.getElementById("dMsg");
+				msg.innerText = fName;
 			}
 
             function showLastName() {
-                // Complete to show an alert with your last name             
+                 let lName = document.getElementById("lName").value;
+				let msg = document.getElementById("dMsg");
+				msg.innerText = lName;           
             }
 
             function showFullName() {
-                // Complete to show an alert with your full name (firstname lastname)
+				let fName = document.getElementById("fName").value;
+                let lName = document.getElementById("lName").value;
+				let msg = document.getElementById("dMsg");
+				msg.innerText = fName + " "+ lName;
                                 
             }
         </script>
